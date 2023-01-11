@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import { useState, useEffect } from 'react'
+import {Routes, Route} from 'react-router-dom';
+import Home from "./Home.jsx";
+import Person from './Person.jsx'
 
 function App() {
+    const [people, setPeople] = useState([])
+
+    useEffect(() => {
+        const personCatcher = (id) => {
+            fetch(`https://swapi.dev/api/people/`)
+                .then(res => res.json())
+                .then(data => setPeople(data.results))
+        }
+        personCatcher()
+    }, [])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/people" element={<Person people={people} />} />
+        </Routes>
     </div>
   );
 }
