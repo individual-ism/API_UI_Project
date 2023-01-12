@@ -1,11 +1,12 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
+import './Home.css'
 
 export default function Home() {
   return (
     <div>
-        <h2>SWAPI</h2>
-        <Link to="/people">SW People</Link>
+        <h1 className='homePageTitle'>Star Wars API Excerption</h1>
+        <Link to="/people" className='peopleLink'>Bear Witness Here</Link>
     </div>
   )
 }

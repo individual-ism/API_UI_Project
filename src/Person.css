@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    justify-content: center;
+    background-image: url("https://lumiere-a.akamaihd.net/v1/images/star-wars-backgrounds-26_9578e6d4.jpeg");
+}
+
+.buttonCollection {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    background-color: darkgray;
+}
+
+.characterButton {
+    display: flex;
+    justify-content: center;
+    background-color: darkgray;
+    opacity: 1;
+    color: black;
+    border-color: rgba(255, 255, 255, 0);
+    padding: 10px;
+    font-weight: bold;
+}
+
+.characterButton:hover {
+    border: 1px solid black;
+}
+
+.characterButton:active {
+    background-color: navy;
+}
+
+.characterTotal {
+    border-color: #800020;
+    border-width: 4px;
+    border: 4px groove darkgray;
+}
+
+.characterBody {
+    list-style: none;
+}
+
+.characterBodyItem {
+    list-style: none;
+}

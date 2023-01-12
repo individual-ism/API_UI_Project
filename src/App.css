@@ -1,3 +1,43 @@
-li {
-    list-style: none
+body {
+    background-image: url("https://lumiere-a.akamaihd.net/v1/images/star-wars-backgrounds-38_d0dbbfb4.jpeg");
+    background-size: cover;
+    display: flex;
 }
+
+li {
+    list-style: square;
+}
+
+.homePageTitle {
+    font-family: 'UnifrakturMaguntia', cursive;
+    font-size: 50px;
+    color: white;
+    text-shadow: 5px 5px black;
+}
+
+
+
+.character {
+    justify-content: center;
+    color: white;
+
+}
+
+.buttonCollection {
+    margin: 0px 10px 10px 10px;
+    flex-wrap: wrap;
+    background-color: gray;
+}
+
+.characterTotal {
+    border: 100px;
+    border-color: #800020;
+}
+
+/* 
+.characterButton {
+    font-weight: bold;
+    background-color: darkgray;
+    margin: 0px;
+    padding: 3px;
+} */

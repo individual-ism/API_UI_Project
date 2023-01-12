@@ -1,13 +1,11 @@
 import './App.css'
 import { useState, useEffect } from 'react'
-import {Routes, Route} from 'react-router-dom';
-import Home from "./Home.jsx";
+import {Routes, Route} from 'react-router-dom'
+import Home from "./Home.jsx"
 import Person from './Person.jsx'
-import Nav from './Nav';
 
 function App() {
     const [people, setPeople] = useState([])
-    const [index, setIndex] = useState(0)
 
     useEffect(() => {
         const personCatcher = (id) => {
@@ -20,12 +18,15 @@ function App() {
 
   return (
     <div className="App">
+            <style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=UnifrakturCook&family=UnifrakturMaguntia&display=swap');
+</style>
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/people" element={<Person people={people} />} />
         </Routes>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

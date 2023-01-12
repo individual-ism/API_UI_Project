@@ -5,14 +5,6 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter as Router} from 'react-router-dom';
 
-// function showCharacter(characterName) {
-//     let character = document.getElementsByClassName("character")
-//     for (let i = 0; i < character.length; i++) {
-//         character[i].style.display = "none"
-//     }
-//     document.getElementById(characterName).style.display = "block"
-// }
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
