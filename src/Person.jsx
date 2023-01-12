@@ -1,10 +1,12 @@
 import {useState} from "react"
 import "./Person.css"
+import {Link} from "react-router-dom"
+
 
 function Person({people}) {
     const [index, setIndex] = useState(0)
 
-    if (!people.length) return <h1>Loading...</h1>
+    if (!people.length) return <h1 className="loading">Loading...</h1>
 
     let character = people[index]
 
@@ -13,7 +15,7 @@ function Person({people}) {
     }
 
     return (
-        <div>
+        <div className="peoplePage">
             <div className="buttonCollection">
                 <button className="characterButton" onClick={() => showCharacter(0)}>Luke Skywalker</button>
                 <button className="characterButton" onClick={() => showCharacter(1)}>C-3PO</button>
@@ -28,15 +30,16 @@ function Person({people}) {
             </div>
             <div className="characterTotal" id={index}>
                 <h1 className="character characterHeading">{character.name}</h1>
-                <ul className="character characterBody">
-                    <li className="character characterBodyItem">Height: {character.height}</li>
-                    <li className="character characterBodyItem">Mass: {character.mass}</li>
-                    <li className="character characterBodyItem">Hair Color: {character.hair_color}</li>
-                    <li className="character characterBodyItem">Skin Color: {character.skin_color}</li>
-                    <li className="character characterBodyItem">Eye Color: {character.eye_color}</li>
-                    <li className="character characterBodyItem">Gender: {character.gender}</li>
-                </ul>
+                <div className="character characterBody">
+                    <p className="character characterBodyItem"><strong className="keyVal">Height: </strong><span className="charVal">{character.height}</span></p>
+                    <p className="character characterBodyItem"><strong className="keyVal">Mass: </strong><span className="charVal">{character.mass}</span></p>
+                    <p className="character characterBodyItem"><strong className="keyVal">Hair Color: </strong><span className="charVal">{character.hair_color}</span></p>
+                    <p className="character characterBodyItem"><strong className="keyVal">Skin Color: </strong><span className="charVal">{character.skin_color}</span></p>
+                    <p className="character characterBodyItem"><strong className="keyVal">Eye Color: </strong><span className="charVal">{character.eye_color}</span></p>
+                    <p className="character characterBodyItem"><strong className="keyVal">Gender: </strong><span className="charVal">{character.gender}</span></p>
+                </div>
             </div>
+            <Link to="/" className="goHome">Home</Link>
         </div>
     )
 

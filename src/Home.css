@@ -1,7 +1,6 @@
 * {
     text-align: center;
     justify-content: center;
-
 }
 
 h1 {
@@ -18,9 +17,23 @@ h1 {
     background-color: black;
     margin: 500px 0px;
     font-size: 20px;
-    
+    text-decoration: none;
+    font-family: 'Cinzel Decorative', cursive;
 }
 
 .homePageTitle {
     margin: 200px 0px 100px 0px;
+}
+
+.apiDisc {
+    position: relative;
+    margin: 100px 0px 0px 0px;
+    color: #800020;
+    font-family: 'Cinzel', serif;
+}
+
+.aDisc {
+    text-decoration: none;
+    color: #800020;
+    font-family: 'Cinzel', serif;
 }
